@@ -9,8 +9,7 @@ public class ReadJson : MonoBehaviour
 
     void Start()
     {
-
+        Character _myChar = new Character();
+        _myChar.charRaces = JsonHelper.FromJson<Character>(_charDetailsFile);
     }
-
-
 }
