@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class JsonHelper : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static T[] FromJson<T>(string json)
     {
-        
+        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(json);
+        return wrapper.Items;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static string ToJson<T>(T[] array)
     {
-        
+        Wrapper<T> wrapper = new Wrapper<T>();
+        wrapper.Items = array;
+        return JsonUtility.ToJson(wrapper);
+    }
+
+    public static string ToJson<T>(T[] array, bool prettyPrint)
+    {
+        Wrapper<T> wrapper = new Wrapper<T>();
+        wrapper.Items = array;
+        return JsonUtility.ToJson(wrapper, prettyPrint);
+    }
+
+    [System.Serializable]
+    private class Wrapper<T>
+    {
+        public T[] Items;
     }
 }
