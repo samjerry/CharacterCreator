@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 428679398}
   - component: {fileID: 428679397}
+  - component: {fileID: 428679399}
   m_Layer: 0
   m_Name: JsonReader
   m_TagString: Untagged
@@ -153,7 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _charNameFile: {fileID: 4900000, guid: 37795060d63c07948a8f2d753eb8ba66, type: 3}
-  _charDetailsFile: {fileID: 4900000, guid: ae1f12d4082d0114f9895ad6d755f291, type: 3}
+  _charRacesFile: {fileID: 4900000, guid: 18a2a6ff00307484a8e0f3a301af27c5, type: 3}
+  _charClassesFile: {fileID: 4900000, guid: 5858d722ff8881b4394e21f8977696af, type: 3}
+  _charStatsFile: {fileID: 4900000, guid: de234b1645f6871498cde35ad1fcf077, type: 3}
 --- !u!4 &428679398
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +171,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &428679399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428679396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03a14d773d062c4e8e9757695abcc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &854917369
 GameObject:
   m_ObjectHideFlags: 0
