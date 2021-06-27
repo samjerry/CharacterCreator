@@ -37,7 +37,7 @@ public class ReadJson : MonoBehaviour
                 _raceText.text += _myChar.charRaces[i];
                 break;
             }
-            _raceText.text += _myChar.charRaces[i] + ",\n";
+            _raceText.text += _myChar.charRaces[i] + "\n";
         }
 
         for (int j = 0; j < _myChar.charClasses.Length; j++)
@@ -57,7 +57,7 @@ public class ReadJson : MonoBehaviour
                 _statText.text += _myChar.charStats[g];
                 break;
             }
-            _statText.text += _myChar.charStats[g] + ",\n";
+            _statText.text += _myChar.charStats[g] + "\n";
         }
     }
 
