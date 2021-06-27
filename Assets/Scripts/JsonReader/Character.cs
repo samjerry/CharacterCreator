@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Character : MonoBehaviour
 {
-    string charName;
-    string charRace;
-    string charClass;
+    public string charName;
+    public string charRace;
+    public string charClass;
 }
