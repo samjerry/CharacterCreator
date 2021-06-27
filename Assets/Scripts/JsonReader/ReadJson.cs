@@ -23,9 +23,6 @@ public class ReadJson : MonoBehaviour
 
         DetailsToText(_myChar);
 
-        //DebugArray(_myChar.charRaces);
-        //DebugArray(_myChar.charClasses);
-        //DebugArray(_myChar.charStats);
     }
 
     private void DetailsToText(Character _myChar)
@@ -40,32 +37,24 @@ public class ReadJson : MonoBehaviour
             _raceText.text += _myChar.charRaces[i] + "\n";
         }
 
-        for (int j = 0; j < _myChar.charClasses.Length; j++)
+        for (int i = 0; i < _myChar.charClasses.Length; i++)
         {
-            if (j == _myChar.charClasses.Length)
+            if (i == _myChar.charClasses.Length)
             {
-                _classText.text += _myChar.charClasses[j];
+                _classText.text += _myChar.charClasses[i];
                 break;
             }
-            _classText.text += _myChar.charClasses[j] + "\n";
+            _classText.text += _myChar.charClasses[i] + "\n";
         }
 
-        for (int g = 0; g < _myChar.charStats.Length; g++)
+        for (int i = 0; i < _myChar.charStats.Length; i++)
         {
-            if (g == _myChar.charStats.Length)
+            if (i == _myChar.charStats.Length)
             {
-                _statText.text += _myChar.charStats[g];
+                _statText.text += _myChar.charStats[i];
                 break;
             }
-            _statText.text += _myChar.charStats[g] + "\n";
-        }
-    }
-
-    private void DebugArray(string[] _array)
-    {
-        foreach (string _key in _array)
-        {
-            Debug.Log(_key);
+            _statText.text += _myChar.charStats[i] + "\n";
         }
     }
 }
