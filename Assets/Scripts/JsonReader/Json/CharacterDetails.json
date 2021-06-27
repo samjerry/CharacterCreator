@@ -1,5 +1,5 @@
 {
-  "Stats": [
+  "charStats": [
     "Strength",
     "Dexterity",
     "Constitution",
@@ -8,7 +8,7 @@
     "Charisma"
   ],
 
-  "Classes": [
+  "charClasses": [
     "Artificer",
     "Barbarian",
     "Bard",
@@ -25,7 +25,7 @@
     "Wizard"
   ],
 
-  "Races": [
+  "charRaces": [
     "Aarakocra",
     "Aasimar",
     "Bugbear",
