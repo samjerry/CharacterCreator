@@ -10,8 +10,8 @@ public class ReadJson : MonoBehaviour
     void Start()
     {
         Character _myChar = new Character();
-        _myChar = JsonUtility.FromJson<Character>(_charDetailsFile.text);
-        _myChar = JsonUtility.FromJson<Character>(_charNameFile.text);
+        _myChar.charClasses = JsonUtility.FromJson<Character>(_charDetailsFile.text).charClasses;
+        //_myChar.charNames = JsonUtility.FromJson<Character>(_charNameFile.text);
 
 
         for (int i = 0; i < _myChar.charNames.GetLength(0); i++)
