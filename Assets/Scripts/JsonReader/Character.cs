@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Character : MonoBehaviour
+public class Character
 {
-    public string[,] charNames { get; set; }
-    public string[] charRaces { get; set; }
-    public string[] charClasses { get; set; }
-    public string[] charStats { get; set; }
+    //public string[,] charNames;
+    public string[] charRaces;
+    public string[] charClasses;
+    public string[] charStats;
 }
