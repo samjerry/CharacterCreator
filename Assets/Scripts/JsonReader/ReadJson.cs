@@ -14,9 +14,12 @@ public class ReadJson : MonoBehaviour
         _myChar = JsonUtility.FromJson<Character>(_charNameFile.text);
 
 
-        foreach (Character character in _myChar.charNames)
+        for (int i = 0; i < _myChar.charNames.GetLength(0); i++)
         {
-            Debug.Log("Found employee: " + _myChar.charNames);
+            for (int j = 0; j < _myChar.charNames.GetLength(1); j++)
+            {
+                Debug.Log(_myChar.charNames[i,j]);
+            }
         }
     }
 }
