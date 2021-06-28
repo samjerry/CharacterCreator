@@ -315,6 +315,7 @@ MonoBehaviour:
   _raceText: {fileID: 228873143}
   _classText: {fileID: 447636518}
   _statText: {fileID: 107970697}
+  charRace: Gith
 --- !u!4 &428679398
 Transform:
   m_ObjectHideFlags: 0
