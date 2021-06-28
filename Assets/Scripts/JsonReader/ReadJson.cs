@@ -11,6 +11,7 @@ public class ReadJson : MonoBehaviour
     [SerializeField] private Text _raceText;
     [SerializeField] private Text _classText;
     [SerializeField] private Text _statText;
+    [SerializeField] private Text _nameText;
 
     [SerializeField] public string charRace;
     void Start()
@@ -19,17 +20,16 @@ public class ReadJson : MonoBehaviour
         _myChar = JsonUtility.FromJson<Character>(_charDetailsFile.text);
         _myChar.charNames = JsonUtility.FromJson<Names>(_charNameFile.text);
 
-        
-
         _statText.text = "";
         _classText.text = "";
         _raceText.text = "";
+        _nameText.text = "";
 
         DetailsToText(_myChar);
         
-        foreach (var item in GetRaceNames(_myChar, charRace))
+        foreach (string _name in GetRaceNames(_myChar, charRace))
         {
-            Debug.Log(item);
+            _nameText.text += _name + "\n";
         }
 
     }
