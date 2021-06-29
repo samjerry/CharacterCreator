@@ -2002,7 +2002,7 @@
     "r'Oon'c'Oon"
   ],
 
-  "Half-Elf": [
+  "Half_Elf": [
     "Ahrendue",
     "Bryant",
     "Aien",
@@ -2205,7 +2205,7 @@
     "Greatstrider"
   ],
 
-  "Half-Orc": [
+  "Half_Orc": [
     "Aggotur",
     "Fecosta",
     "Agumur",
@@ -4597,7 +4597,7 @@
     "Wind"
   ],
 
-  "Simic Hybrid": [
+  "Simic_Hybrid": [
     "Adcaryn",
     "Adrel",
     "Aradi",
@@ -5531,7 +5531,7 @@
     "Wrench"
   ],
 
-  "Yuan-ti": [
+  "Yuan_ti": [
     "Ahazhie",
     "Astissil",
     "Azshizhu",
