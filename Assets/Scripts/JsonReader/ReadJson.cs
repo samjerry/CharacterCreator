@@ -99,7 +99,6 @@ public class ReadJson : MonoBehaviour
             case "Loxodon": _names = _myChar.charNames.Loxodon; break;
             case "Minotaur": _names = _myChar.charNames.Minotaur; break;
             case "Orc": _names = _myChar.charNames.Orc; break;
-            case "Pureblood": _names = _myChar.charNames.Pureblood; break;
             case "Shifter": _names = _myChar.charNames.Shifter; break;
             case "Simic-Hybrid": _names = _myChar.charNames.Simic_Hybrid; break;
             case "Tabaxi": _names = _myChar.charNames.Tabaxi; break;

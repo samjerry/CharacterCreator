@@ -41,7 +41,6 @@ public class Names
     public string[] Loxodon;
     public string[] Minotaur;
     public string[] Orc;
-    public string[] Pureblood;
     public string[] Shifter;
     public string[] Simic_Hybrid;
     public string[] Tabaxi;
