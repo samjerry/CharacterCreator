@@ -31,7 +31,6 @@ public class ReadJson : MonoBehaviour
         {
             _nameText.text += _name + "\n";
         }
-
     }
 
     private void DetailsToText(Character _myChar)
