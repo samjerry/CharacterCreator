@@ -105,7 +105,6 @@ public class ReadJson : MonoBehaviour
             case "Tortle": _names = _myChar.charNames.Tortle; break;
             case "Triton": _names = _myChar.charNames.Triton; break;
             case "Vedalken": _names = _myChar.charNames.Vedalken; break;
-            case "Verdan": _names = _myChar.charNames.Verdan; break;
             case "Warforged": _names = _myChar.charNames.Warforged; break;
             case "Yuan-ti": _names = _myChar.charNames.Yuan_ti; break;
             default: _names = null; break;

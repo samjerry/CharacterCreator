@@ -48,7 +48,6 @@ public class Names
     public string[] Tortle;
     public string[] Triton;
     public string[] Vedalken;
-    public string[] Verdan;
     public string[] Warforged;
     public string[] Yuan_ti;
 }
