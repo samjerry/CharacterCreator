@@ -37,6 +37,7 @@ public class ReadJson : MonoBehaviour
         {
             if (_name == "ERROR: INVALID RACE")
             {
+                _nameText.text = _name;
                 break;
             }
 
