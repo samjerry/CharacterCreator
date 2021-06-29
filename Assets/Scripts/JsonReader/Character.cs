@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Character
+public class Character // this is a character template. you can use this in another script to create a new Character and fill in the variables.
 {
+    //This Array resembles the Character Name property. the GetRaceNames() function in ReadJson.cs returns the names for corresponding charRace.
     public Names charNames;
-    public string[] charRaces;
-    public string[] charClasses;
+
+    //These Arrays resemble the Characters properties. the ReadJson.cs will fill these arrays with the data it retrieves from the charDetailsFile.
+    public string[] charRaces; 
+    public string[] charClasses; 
     public string[] charStats;
 }
 
 [System.Serializable]
 public class Names
 {
+    //All these arrays contain the names. 
     public string[] Aarakocra; 
     public string[] Aasimar; 
     public string[] Bugbear; 
