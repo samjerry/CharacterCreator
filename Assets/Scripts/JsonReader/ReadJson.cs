@@ -5,32 +5,41 @@ using UnityEngine.UI;
 
 public class ReadJson : MonoBehaviour
 {
-    [SerializeField] private TextAsset _charNameFile;
-    [SerializeField] private TextAsset _charDetailsFile;
+    [SerializeField] private TextAsset _charNameFile; // this file contains all the character names possible sorted by Race.
+    [SerializeField] private TextAsset _charDetailsFile; // this file contains all the detail names possible sorted by Type (Race, Class, Stats).
 
+    // These Text fields represent the content from the Character.cs Arrays.
     [SerializeField] private Text _raceText;
     [SerializeField] private Text _classText;
     [SerializeField] private Text _statText;
     [SerializeField] private Text _nameText;
 
-    public string charRace;
-    public Character newChar;
+    public string charRace; //this string is used by GetRaceNames() if you change this string to a race you got from the race generator you will get the corresponding character names if you call GetRaceNames().
+
+    public Character newChar; // this will be used as our current instance of Character.cs.
 
     void Start()
     {
-        newChar = new Character();
-        newChar = JsonUtility.FromJson<Character>(_charDetailsFile.text);
-        newChar.charNames = JsonUtility.FromJson<Names>(_charNameFile.text);
+        newChar = new Character(); // actually creates the new instance of Character.cs
+        newChar = JsonUtility.FromJson<Character>(_charDetailsFile.text); // this reads the _charDetailsFile containing (Race, Class, Stats) the Array names in the json must be the EXACT SAME as the var names in Character.cs
+        newChar.charNames = JsonUtility.FromJson<Names>(_charNameFile.text);// this reads the _charNameFile containing (names for all races) the Array names in the json must be the EXACT SAME as the var names in Character.cs
 
+        // clears the text from the text fields
         _statText.text = "";
         _classText.text = "";
         _raceText.text = "";
         _nameText.text = "";
 
-        DetailsToText();
+        DetailsToText(); // for each array (except names) puts each index into the corresponding text fields
         
+        //puts all names from the Race = charRace into the _nameText field
         foreach (string _name in GetRaceNames())
         {
+            if (_name == "ERROR: INVALID RACE")
+            {
+                break;
+            }
+
             _nameText.text += _name + "\n";
         }
     }
@@ -72,6 +81,7 @@ public class ReadJson : MonoBehaviour
     {
         string[] _names = new string[255];
 
+        //compares the charRace with all Races and returns the array of the corresponding race.
         switch (charRace)
         {
             case "Aarakocra": _names = newChar.charNames.Aarakocra; break;
