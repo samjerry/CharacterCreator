@@ -72,7 +72,7 @@ public class ReadJson : MonoBehaviour
 
         switch (_race)
         {
-            case "Aaracockra": _names = _myChar.charNames.Aaracockra; break;
+            case "Aarakocra": _names = _myChar.charNames.Aarakocra; break;
             case "Aasimar": _names = _myChar.charNames.Aasimar; break;
             case "Bugbear": _names = _myChar.charNames.Bugbear; break;
             case "Centaur": _names = _myChar.charNames.Centaur; break;
