@@ -13,105 +13,107 @@ public class ReadJson : MonoBehaviour
     [SerializeField] private Text _statText;
     [SerializeField] private Text _nameText;
 
-    [SerializeField] public string charRace;
+    public string charRace;
+    public Character newChar;
+
     void Start()
     {
-        Character _myChar = new Character();
-        _myChar = JsonUtility.FromJson<Character>(_charDetailsFile.text);
-        _myChar.charNames = JsonUtility.FromJson<Names>(_charNameFile.text);
+        newChar = new Character();
+        newChar = JsonUtility.FromJson<Character>(_charDetailsFile.text);
+        newChar.charNames = JsonUtility.FromJson<Names>(_charNameFile.text);
 
         _statText.text = "";
         _classText.text = "";
         _raceText.text = "";
         _nameText.text = "";
 
-        DetailsToText(_myChar);
+        DetailsToText();
         
-        foreach (string _name in GetRaceNames(_myChar, charRace))
+        foreach (string _name in GetRaceNames())
         {
             _nameText.text += _name + "\n";
         }
     }
 
-    private void DetailsToText(Character _myChar)
+    private void DetailsToText()
     {
-        for (int i = 0; i < _myChar.charRaces.Length; i++)
+        for (int i = 0; i < newChar.charRaces.Length; i++)
         {
-            if (i == _myChar.charRaces.Length)
+            if (i == newChar.charRaces.Length)
             {
-                _raceText.text += _myChar.charRaces[i];
+                _raceText.text += newChar.charRaces[i];
                 break;
             }
-            _raceText.text += _myChar.charRaces[i] + "\n";
+            _raceText.text += newChar.charRaces[i] + "\n";
         }
 
-        for (int i = 0; i < _myChar.charClasses.Length; i++)
+        for (int i = 0; i < newChar.charClasses.Length; i++)
         {
-            if (i == _myChar.charClasses.Length)
+            if (i == newChar.charClasses.Length)
             {
-                _classText.text += _myChar.charClasses[i];
+                _classText.text += newChar.charClasses[i];
                 break;
             }
-            _classText.text += _myChar.charClasses[i] + "\n";
+            _classText.text += newChar.charClasses[i] + "\n";
         }
 
-        for (int i = 0; i < _myChar.charStats.Length; i++)
+        for (int i = 0; i < newChar.charStats.Length; i++)
         {
-            if (i == _myChar.charStats.Length)
+            if (i == newChar.charStats.Length)
             {
-                _statText.text += _myChar.charStats[i];
+                _statText.text += newChar.charStats[i];
                 break;
             }
-            _statText.text += _myChar.charStats[i] + "\n";
+            _statText.text += newChar.charStats[i] + "\n";
         }
     }
 
-    private string[] GetRaceNames(Character _myChar, string _race)
+    private string[] GetRaceNames()
     {
-        string[] _names;
+        string[] _names = new string[255];
 
-        switch (_race)
+        switch (charRace)
         {
-            case "Aarakocra": _names = _myChar.charNames.Aarakocra; break;
-            case "Aasimar": _names = _myChar.charNames.Aasimar; break;
-            case "Bugbear": _names = _myChar.charNames.Bugbear; break;
-            case "Centaur": _names = _myChar.charNames.Centaur; break;
-            case "Changeling": _names = _myChar.charNames.Changeling; break;
-            case "Dragonborn": _names = _myChar.charNames.Dragonborn; break;
-            case "Dwarf": _names = _myChar.charNames.Dwarf; break;
-            case "Elf": _names = _myChar.charNames.Elf; break;
-            case "Firbolg": _names = _myChar.charNames.Firbolg; break;
-            case "Genasi": _names = _myChar.charNames.Genasi; break;
-            case "Gith": _names = _myChar.charNames.Gith; break;
-            case "Gnome": _names = _myChar.charNames.Gnome; break;
-            case "Goblin": _names = _myChar.charNames.Goblin; break;
-            case "Goliath": _names = _myChar.charNames.Goliath; break;
-            case "Grung": _names = _myChar.charNames.Grung; break;
-            case "Half_Elf": _names = _myChar.charNames.Half_Elf; break;
-            case "Half_Orc": _names = _myChar.charNames.Half_Orc; break;
-            case "Halfling": _names = _myChar.charNames.Halfling; break;
-            case "Hobgoblin": _names = _myChar.charNames.Hobgoblin; break;
-            case "Human": _names = _myChar.charNames.Human; break;
-            case "Kalashtar": _names = _myChar.charNames.Kalashtar; break;
-            case "Kenku": _names = _myChar.charNames.Kenku; break;
-            case "Kobold": _names = _myChar.charNames.Kobold; break;
-            case "Leonin": _names = _myChar.charNames.Leonin; break;
-            case "Lizardfolk": _names = _myChar.charNames.Lizardfolk; break;
-            case "Locathah": _names = _myChar.charNames.Locathah; break;
-            case "Loxodon": _names = _myChar.charNames.Loxodon; break;
-            case "Minotaur": _names = _myChar.charNames.Minotaur; break;
-            case "Orc": _names = _myChar.charNames.Orc; break;
-            case "Satyr": _names = _myChar.charNames.Satyr; break;
-            case "Shifter": _names = _myChar.charNames.Shifter; break;
-            case "Simic_Hybrid": _names = _myChar.charNames.Simic_Hybrid; break;
-            case "Tabaxi": _names = _myChar.charNames.Tabaxi; break;
-            case "Tiefling": _names = _myChar.charNames.Tiefling; break;
-            case "Tortle": _names = _myChar.charNames.Tortle; break;
-            case "Triton": _names = _myChar.charNames.Triton; break;
-            case "Vedalken": _names = _myChar.charNames.Vedalken; break;
-            case "Warforged": _names = _myChar.charNames.Warforged; break;
-            case "Yuan_ti": _names = _myChar.charNames.Yuan_ti; break;
-            default: _names = null; break;
+            case "Aarakocra": _names = newChar.charNames.Aarakocra; break;
+            case "Aasimar": _names = newChar.charNames.Aasimar; break;
+            case "Bugbear": _names = newChar.charNames.Bugbear; break;
+            case "Centaur": _names = newChar.charNames.Centaur; break;
+            case "Changeling": _names = newChar.charNames.Changeling; break;
+            case "Dragonborn": _names = newChar.charNames.Dragonborn; break;
+            case "Dwarf": _names = newChar.charNames.Dwarf; break;
+            case "Elf": _names = newChar.charNames.Elf; break;
+            case "Firbolg": _names = newChar.charNames.Firbolg; break;
+            case "Genasi": _names = newChar.charNames.Genasi; break;
+            case "Gith": _names = newChar.charNames.Gith; break;
+            case "Gnome": _names = newChar.charNames.Gnome; break;
+            case "Goblin": _names = newChar.charNames.Goblin; break;
+            case "Goliath": _names = newChar.charNames.Goliath; break;
+            case "Grung": _names = newChar.charNames.Grung; break;
+            case "Half_Elf": _names = newChar.charNames.Half_Elf; break;
+            case "Half_Orc": _names = newChar.charNames.Half_Orc; break;
+            case "Halfling": _names = newChar.charNames.Halfling; break;
+            case "Hobgoblin": _names = newChar.charNames.Hobgoblin; break;
+            case "Human": _names = newChar.charNames.Human; break;
+            case "Kalashtar": _names = newChar.charNames.Kalashtar; break;
+            case "Kenku": _names = newChar.charNames.Kenku; break;
+            case "Kobold": _names = newChar.charNames.Kobold; break;
+            case "Leonin": _names = newChar.charNames.Leonin; break;
+            case "Lizardfolk": _names = newChar.charNames.Lizardfolk; break;
+            case "Locathah": _names = newChar.charNames.Locathah; break;
+            case "Loxodon": _names = newChar.charNames.Loxodon; break;
+            case "Minotaur": _names = newChar.charNames.Minotaur; break;
+            case "Orc": _names = newChar.charNames.Orc; break;
+            case "Satyr": _names = newChar.charNames.Satyr; break;
+            case "Shifter": _names = newChar.charNames.Shifter; break;
+            case "Simic_Hybrid": _names = newChar.charNames.Simic_Hybrid; break;
+            case "Tabaxi": _names = newChar.charNames.Tabaxi; break;
+            case "Tiefling": _names = newChar.charNames.Tiefling; break;
+            case "Tortle": _names = newChar.charNames.Tortle; break;
+            case "Triton": _names = newChar.charNames.Triton; break;
+            case "Vedalken": _names = newChar.charNames.Vedalken; break;
+            case "Warforged": _names = newChar.charNames.Warforged; break;
+            case "Yuan_ti": _names = newChar.charNames.Yuan_ti; break;
+            default: _names[0] = "ERROR: INVALID RACE"; break;
         }
         return _names;
     }
