@@ -77,7 +77,7 @@ public class ReadJson : MonoBehaviour
         }
     }
 
-    private string[] GetRaceNames()
+    public string[] GetRaceNames()
     {
         string[] _names = new string[255];
 
