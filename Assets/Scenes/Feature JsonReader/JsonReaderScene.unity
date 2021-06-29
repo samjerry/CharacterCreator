@@ -395,7 +395,7 @@ MonoBehaviour:
   _classText: {fileID: 447636518}
   _statText: {fileID: 107970697}
   _nameText: {fileID: 14041785}
-  charRace: Gith
+  charRace: yes
   newChar:
     charNames:
       Aarakocra: []
