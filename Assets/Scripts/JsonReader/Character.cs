@@ -14,7 +14,7 @@ public class Character
 [System.Serializable]
 public class Names
 {
-    public string[] Aaracockra; 
+    public string[] Aarakocra; 
     public string[] Aasimar; 
     public string[] Bugbear; 
     public string[] Centaur; 
