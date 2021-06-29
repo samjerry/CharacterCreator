@@ -28,6 +28,7 @@ public class Names
     public string[] Gnome;
     public string[] Goblin;
     public string[] Goliath;
+    public string[] Grung;
     public string[] Half_Elf;
     public string[] Half_Orc;
     public string[] Halfling;
@@ -36,11 +37,13 @@ public class Names
     public string[] Kalashtar;
     public string[] Kenku;
     public string[] Kobold;
+    public string[] Leonin;
     public string[] Lizardfolk;
     public string[] Locathah;
     public string[] Loxodon;
     public string[] Minotaur;
     public string[] Orc;
+    public string[] Satyr;
     public string[] Shifter;
     public string[] Simic_Hybrid;
     public string[] Tabaxi;

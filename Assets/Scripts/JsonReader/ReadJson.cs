@@ -87,8 +87,8 @@ public class ReadJson : MonoBehaviour
             case "Goblin": _names = _myChar.charNames.Goblin; break;
             case "Goliath": _names = _myChar.charNames.Goliath; break;
             case "Grung": _names = _myChar.charNames.Grung; break;
-            case "Half-Elf": _names = _myChar.charNames.Half_Elf; break;
-            case "Half-Orc": _names = _myChar.charNames.Half_Orc; break;
+            case "Half_Elf": _names = _myChar.charNames.Half_Elf; break;
+            case "Half_Orc": _names = _myChar.charNames.Half_Orc; break;
             case "Halfling": _names = _myChar.charNames.Halfling; break;
             case "Hobgoblin": _names = _myChar.charNames.Hobgoblin; break;
             case "Human": _names = _myChar.charNames.Human; break;
@@ -103,14 +103,14 @@ public class ReadJson : MonoBehaviour
             case "Orc": _names = _myChar.charNames.Orc; break;
             case "Satyr": _names = _myChar.charNames.Satyr; break;
             case "Shifter": _names = _myChar.charNames.Shifter; break;
-            case "Simic-Hybrid": _names = _myChar.charNames.Simic_Hybrid; break;
+            case "Simic_Hybrid": _names = _myChar.charNames.Simic_Hybrid; break;
             case "Tabaxi": _names = _myChar.charNames.Tabaxi; break;
             case "Tiefling": _names = _myChar.charNames.Tiefling; break;
             case "Tortle": _names = _myChar.charNames.Tortle; break;
             case "Triton": _names = _myChar.charNames.Triton; break;
             case "Vedalken": _names = _myChar.charNames.Vedalken; break;
             case "Warforged": _names = _myChar.charNames.Warforged; break;
-            case "Yuan-ti": _names = _myChar.charNames.Yuan_ti; break;
+            case "Yuan_ti": _names = _myChar.charNames.Yuan_ti; break;
             default: _names = null; break;
         }
         return _names;
