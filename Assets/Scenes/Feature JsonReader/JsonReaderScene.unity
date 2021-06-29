@@ -394,8 +394,52 @@ MonoBehaviour:
   _raceText: {fileID: 228873143}
   _classText: {fileID: 447636518}
   _statText: {fileID: 107970697}
-  _nameText: {fileID: 0}
+  _nameText: {fileID: 14041785}
   charRace: Gith
+  newChar:
+    charNames:
+      Aarakocra: []
+      Aasimar: []
+      Bugbear: []
+      Centaur: []
+      Changeling: []
+      Dragonborn: []
+      Dwarf: []
+      Elf: []
+      Firbolg: []
+      Genasi: []
+      Gith: []
+      Gnome: []
+      Goblin: []
+      Goliath: []
+      Grung: []
+      Half_Elf: []
+      Half_Orc: []
+      Halfling: []
+      Hobgoblin: []
+      Human: []
+      Kalashtar: []
+      Kenku: []
+      Kobold: []
+      Leonin: []
+      Lizardfolk: []
+      Locathah: []
+      Loxodon: []
+      Minotaur: []
+      Orc: []
+      Satyr: []
+      Shifter: []
+      Simic_Hybrid: []
+      Tabaxi: []
+      Tiefling: []
+      Tortle: []
+      Triton: []
+      Vedalken: []
+      Warforged: []
+      Yuan_ti: []
+    charRaces: []
+    charClasses: []
+    charStats: []
 --- !u!4 &428679398
 Transform:
   m_ObjectHideFlags: 0
