@@ -7,7 +7,6 @@ public class ReadJson : MonoBehaviour
 {
     [SerializeField] private TextAsset _charNameFile; // this file contains all the character names possible sorted by Race.
     [SerializeField] private TextAsset _charDetailsFile; // this file contains all the detail names possible sorted by Type (Race, Class, Stats).
-    [SerializeField] private TextAsset _charStoryFile; // this file contains all the story details possible sorted by Type (Adjective, Location, Details).
 
     // These Text fields represent the content from the Character.cs Arrays.
     [SerializeField] private Text _raceText;
