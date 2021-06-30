@@ -5,13 +5,8 @@ using UnityEngine.UI;
 
 public class BackstoryGenerator : MonoBehaviour
 {
-
-    private void Start()
-    {
-
-    }
-
-    public string GenerateBackstory(Character _char) {
+    //this function will receive all available character information from the ReadJson.cs
+    public string GenerateBackstory(Character _char) { 
         string _backstory = "adjective, race, class from location, who, details";
         string _adjective = "adjective";
         string _race = "race";
@@ -32,14 +27,15 @@ public class BackstoryGenerator : MonoBehaviour
         return _backstory;
     }
 
+    // This Function gets a random string from a given array
     private string RandomStringFromArray(string[] strArray)
     {
         int _index = 0;
-        
+
         _index = Random.Range(0, strArray.Length);
 
         Debug.Log(_index + " out of " + strArray.Length);
-        
+
         return strArray[_index];
     }
 }
