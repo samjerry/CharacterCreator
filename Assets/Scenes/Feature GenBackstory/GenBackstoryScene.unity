@@ -446,9 +446,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1073389580}
     - target: {fileID: 6274371354683365144, guid: d08f6bf493e6ba546b98f956d7d6a98c, type: 3}
+      propertyPath: _storyText
+      value: 
+      objectReference: {fileID: 689627155}
+    - target: {fileID: 6274371354683365144, guid: d08f6bf493e6ba546b98f956d7d6a98c, type: 3}
       propertyPath: _charStoryFile
       value: 
       objectReference: {fileID: 4900000, guid: 8376c8ad409a7c4458882b3bf0dc070a, type: 3}
+    - target: {fileID: 6274371354683365144, guid: d08f6bf493e6ba546b98f956d7d6a98c, type: 3}
+      propertyPath: _storyTextField
+      value: 
+      objectReference: {fileID: 689627155}
     - target: {fileID: 6274371354683365145, guid: d08f6bf493e6ba546b98f956d7d6a98c, type: 3}
       propertyPath: m_Name
       value: JsonReader

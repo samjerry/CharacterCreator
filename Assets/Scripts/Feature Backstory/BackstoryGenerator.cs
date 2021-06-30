@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class BackstoryGenerator : MonoBehaviour
 {
-    [SerializeField] private Text _storyTextField;
+
     private void Start()
     {
-        _storyTextField.text = GenerateBackstory();
+
     }
 
-    public string GenerateBackstory() {
+    public string GenerateBackstory(Character _char) {
         string _backstory = "adjective, race, class from location, who, details";
         string _adjective = "adjective";
         string _race = "race";
@@ -19,17 +19,27 @@ public class BackstoryGenerator : MonoBehaviour
         string _location = "location";
         string _details = "details";
 
-        Character _newChar = GameObject.Find("JsonReader").GetComponent<ReadJson>().newChar;
 
-        _adjective = RandomStringFromArray(_newChar.storyAdjective);
-        _location = RandomStringFromArray(_newChar.storyLocation);
-        _details = RandomStringFromArray(_newChar.storyDetails);
-        _race = RandomStringFromArray(_newChar.charRaces);
-        _class = RandomStringFromArray(_newChar.charClasses);
+        Debug.Log(_char.storyAdjective.Length);
+
+        _adjective = RandomStringFromArray(_char.storyAdjective);
+        _location = RandomStringFromArray(_char.storyLocation);
+        _details = RandomStringFromArray(_char.storyDetails);
+        _race = RandomStringFromArray(_char.charRaces);
+        _class = RandomStringFromArray(_char.charClasses);
 
         _backstory = _adjective + " " + _race + " " + _class + " from " + _location + " who " + _details;
         return _backstory;
     }
 
-    private string RandomStringFromArray(string[] strArray) => strArray[Random.Range(0, strArray.Length)]; 
+    private string RandomStringFromArray(string[] strArray)
+    {
+        int _index = 0;
+        
+        _index = Random.Range(0, strArray.Length);
+
+        Debug.Log(_index + " out of " + strArray.Length);
+        
+        return strArray[_index];
+    }
 }
