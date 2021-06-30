@@ -79,7 +79,7 @@ public class ReadJson : MonoBehaviour
             _statText.text += newChar.charStats[i] + "\n";
         }
 
-        _storyText.text = GameObject.Find("BackstoryGenerator").GetComponent<BackstoryGenerator>().GenerateBackstory(newChar);
+        _storyText.text = GameObject.Find("BackstoryGenerator").GetComponent<BackstoryGenerator>().GenerateBackstory(newChar); // randomize the character backstory
     }
 
     public string[] GetRaceNames()
