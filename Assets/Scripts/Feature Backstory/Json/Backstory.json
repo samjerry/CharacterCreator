@@ -1,6 +1,6 @@
 {
 
-  "adjective": [
+  "storyAdjective": [
     "absent minded",
     "adventurous",
     "agreeable",
@@ -157,7 +157,7 @@
     "well-intentioned"
   ],
 
-  "location": [
+  "storyLocation": [
     "a backwater village",
     "a boarding school for the children of middle-class wizards",
     "a boarding school",
@@ -392,7 +392,7 @@
     "Waterdeep"
   ],
 
-  "backstory": [
+  "storyDetails": [
     "accidentally torched the local temple and is now cursed by its god",
     "acts shallow but only to hide their insecurities",
     "adds a notch to their sword every night",
