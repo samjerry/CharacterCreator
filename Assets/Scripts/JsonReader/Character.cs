@@ -12,6 +12,9 @@ public class Character // this is a character template. you can use this in anot
     public string[] charRaces; 
     public string[] charClasses; 
     public string[] charStats;
+    public string[] adjective;
+    public string[] location;
+    public string[] backstory;
 }
 
 [System.Serializable]
