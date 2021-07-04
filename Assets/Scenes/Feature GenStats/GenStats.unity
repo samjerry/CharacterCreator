@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1318218570016850116}
-  _statText: {fileID: 112362148}
+  _statText: {fileID: 1912111308}
 --- !u!4 &1296759368
 Transform:
   m_ObjectHideFlags: 0

@@ -27,16 +27,13 @@ public class GenStats : MonoBehaviour
     
     private string[] ShuffleArray(string[] _stats)
     {
-        int n = _stats.Length;
-        int rng = Random.Range(0, _stats.Length);
-
-        while (n > 1)
+        string _temp;
+        for (int i = 0; i < _stats.Length; i++)
         {
-            n--;
-            int k = (n + 1);
-            var value = _stats[k];
-            _stats[k] = _stats[n];
-            _stats[n] = value;
+            int _rnd = Random.Range(0, _stats.Length);
+            _temp = _stats[_rnd];
+            _stats[_rnd] = _stats[i];
+            _stats[i] = _temp;
         }
 
         return _stats;
