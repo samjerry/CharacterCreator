@@ -8,12 +8,37 @@ public class RaceGenerator : MonoBehaviour
     [SerializeField] private ReadJson _readJson;
     [SerializeField] private string setCharRace;
 
+    // The Index Number that is going to be randomized 
+    [SerializeField] private int IndexNum; 
 
     //Function to randomize the race
-    public string RandomizeRace()
+    public int RandomizeRace()
     {
+        // Randomized the Index Number
+        IndexNum = Random.Range(0, 38);
 
-        return;
+        //Goes by every Race 
+        for (int i = 0; i < 38; i++)
+        {
+            if(i == IndexNum)
+            {
+                
+            }
+            else
+            {
+                i += 1;
+            }
+        }
+        return IndexNum;
+    }
+
+    public void Start()
+    {
+        RandomizeRace();
+    }
+    private void Update()
+    {
+        print(IndexNum);
     }
 
 
