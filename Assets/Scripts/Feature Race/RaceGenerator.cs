@@ -8,7 +8,7 @@ public class RaceGenerator : MonoBehaviour
     [SerializeField] private ReadJson _readJson;
 
     // The Index Number that is going to be randomized 
-    [SerializeField] private int IndexNum; 
+    [SerializeField] private int _indexNum; 
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class RaceGenerator : MonoBehaviour
         //Goes by every Race 
         for (int i = 0; i < _readJson.newChar.charRaces.Length; i++)
         {
-            if (i == IndexNum)
+            if (i == _indexNum)
             {
                 _readJson.charRace = _readJson.newChar.charRaces[i];
             }
@@ -37,8 +37,8 @@ public class RaceGenerator : MonoBehaviour
     int RandomizeRace()
     {
         // Randomized the Index Number
-        IndexNum = Random.Range(0, 38);
-        return IndexNum;
+        _indexNum = Random.Range(0, 38);
+        return _indexNum;
     }
 
 }
