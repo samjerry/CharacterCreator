@@ -19,7 +19,7 @@ public class ClassGenerator : MonoBehaviour
     {
         //Goes by every Race 
         for (int i = 0; i < _readJson.newChar.charClasses.Length; i++)
-        {
+        { 
             if (i == IndexNum)
             {
                 charClass = _readJson.newChar.charClasses[i];
