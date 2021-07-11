@@ -22,7 +22,7 @@ public class ClassGenerator : MonoBehaviour
         { 
             if (i == IndexNum)
             {
-                charClass = _readJson.newChar.charClasses[i];
+                charClass = _readJson.newChar.charClasses[i]; 
                 print(charClass);
             }
             else
