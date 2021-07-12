@@ -8,11 +8,11 @@ public class RaceGenerator : MonoBehaviour
     [SerializeField] private ReadJson _readJson;
 
     // The Index Number that is going to be randomized 
-    [SerializeField] private int _indexNum; 
+    [SerializeField] private int _indexNum;
 
     void Start()
     {
-        RandomizeRace();
+        Randomize(_readJson.newChar.charClasses.Length);
     }
 
     void Update()
@@ -34,10 +34,10 @@ public class RaceGenerator : MonoBehaviour
 
     }
     //Function to randomize a number, so that it later can use it to know which Index number it should take
-    int RandomizeRace()
+    int Randomize(int arrayLength)
     {
         // Randomized the Index Number
-        _indexNum = Random.Range(0, 38);
+        _indexNum = Random.Range(0, arrayLength);
         return _indexNum;
     }
 
