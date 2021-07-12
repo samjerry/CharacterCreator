@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RaceGenerator : MonoBehaviour
 {
@@ -10,9 +11,11 @@ public class RaceGenerator : MonoBehaviour
     // The Index Number that is going to be randomized 
     [SerializeField] private int _indexNum;
 
+    public Text testText;
+
     void Start()
     {
-        Randomize(_readJson.newChar.charClasses.Length);
+        RandomizeRace();
     }
 
     void Update()
@@ -23,10 +26,7 @@ public class RaceGenerator : MonoBehaviour
             if (i == _indexNum)
             {
                 _readJson.charRace = _readJson.newChar.charRaces[i];
-            }
-            else
-            {
-                i += 1;
+                testText.text = _readJson.charRace;
             }
         }
         
@@ -34,10 +34,10 @@ public class RaceGenerator : MonoBehaviour
 
     }
     //Function to randomize a number, so that it later can use it to know which Index number it should take
-    int Randomize(int arrayLength)
+    int RandomizeRace()
     {
         // Randomized the Index Number
-        _indexNum = Random.Range(0, arrayLength);
+        _indexNum = Random.Range(0, 38);
         return _indexNum;
     }
 
