@@ -24,7 +24,7 @@ public class ClassGenerator : MonoBehaviour
     void Update()
     {
         //Goes by every Race 
-        for (int i = 0; i < _readJson.newChar.charClasses.Length; i++)
+        for (int i = 0; i < _readJson.newChar.charClasses.Length; i++) 
         { 
             if (i == IndexNum)
             {
