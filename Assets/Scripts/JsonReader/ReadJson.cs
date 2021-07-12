@@ -80,6 +80,7 @@ public class ReadJson : MonoBehaviour
         }
 
         _storyText.text = GameObject.Find("BackstoryGenerator").GetComponent<BackstoryGenerator>().GenerateBackstory(newChar); // randomize the character backstory
+
     }
 
     public string[] GetRaceNames()

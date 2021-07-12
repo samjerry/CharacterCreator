@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClassGenerator : MonoBehaviour
 {
@@ -9,10 +10,15 @@ public class ClassGenerator : MonoBehaviour
 
     // The Index Number that is going to be randomized 
     [SerializeField] private int IndexNum;
+
+     public Text _TextTest;
+
+    // Variable to save the class
     public string charClass;
+
     void Start()
     {
-        RandomizeClass();
+        Randomize(_readJson.newChar.charClasses.Length);
     }
 
     void Update()
@@ -22,23 +28,20 @@ public class ClassGenerator : MonoBehaviour
         { 
             if (i == IndexNum)
             {
-                charClass = _readJson.newChar.charClasses[i]; 
-                print(charClass);
+                charClass = _readJson.newChar.charClasses[i];
+                _TextTest.text = charClass;
             }
-            else
-            {
-                i += 1;
-            }
+
         }
        
        
     }
 
     //Function to randomize a number, so that it later can use it to know which Index number it should take
-    int RandomizeClass()
+    int Randomize(int arrayLength)
     {
         // Randomized the Index Number
-        IndexNum = Random.Range(0, 38);
+        IndexNum = Random.Range(0, arrayLength);
         return IndexNum;
     }
 
