@@ -9,9 +9,9 @@ public class ClassGenerator : MonoBehaviour
     [SerializeField] private ReadJson _readJson;
 
     // The Index Number that is going to be randomized 
-    [SerializeField] private int IndexNum;
+    [SerializeField] private int _indexNum;
 
-     public Text _TextTest;
+     public Text textTest;
 
     // Variable to save the class
     public string charClass;
@@ -26,10 +26,10 @@ public class ClassGenerator : MonoBehaviour
         //Goes by every Race 
         for (int i = 0; i < _readJson.newChar.charClasses.Length; i++) 
         { 
-            if (i == IndexNum)
+            if (i == _indexNum)
             {
                 charClass = _readJson.newChar.charClasses[i];
-                _TextTest.text = charClass;
+                textTest.text = charClass;
             }
 
         }
@@ -41,8 +41,8 @@ public class ClassGenerator : MonoBehaviour
     int Randomize(int arrayLength)
     {
         // Randomized the Index Number
-        IndexNum = Random.Range(0, arrayLength);
-        return IndexNum;
+        _indexNum = Random.Range(0, arrayLength);
+        return _indexNum;
     }
 
 }
