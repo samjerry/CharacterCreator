@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ClassGenerator : MonoBehaviour
 {
-    // Variables used to get the variable charRace from ReadJson
+    // Variables used to get the variable charClass from ReadJson
     [SerializeField] private ReadJson _readJson;
 
     // The Index Number that is going to be randomized 
@@ -23,7 +23,7 @@ public class ClassGenerator : MonoBehaviour
 
     void Update()
     {
-        //Goes by every Race 
+        //Goes by every Class
         for (int i = 0; i < _readJson.newChar.charClasses.Length; i++) 
         { 
             if (i == _indexNum)
