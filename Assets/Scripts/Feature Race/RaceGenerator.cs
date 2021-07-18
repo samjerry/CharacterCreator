@@ -11,37 +11,27 @@ public class RaceGenerator : MonoBehaviour
     // The Index Number that is going to be randomized 
     [SerializeField] private int _indexNum;
 
-    public Text _textTest;
 
-    void Start()
+    public string GenerateRace(string race)
     {
-        Randomize(_readJson.newChar.charRaces.Length);
-    }
-
-    void Update()
-    {
-        //Goes by every Race 
+        int _randInt = Randomize(_readJson.newChar.charRaces.Length);
         for (int i = 0; i < _readJson.newChar.charRaces.Length; i++)
         {
-            if (i == _indexNum)
-            {
-                _readJson.charRace = _readJson.newChar.charRaces[i];
-                _textTest.text = _readJson.charRace;
+            if (i == _randInt)
+            { 
+                race = _readJson.newChar.charRaces[i];
             }
-
         }
-
-
+        return race;
     }
 
-    //Function to randomize a number, so that it later can use it to know which Index number it should take
-    int Randomize(int arrayLength)
+    int Randomize(int _arrayLength)
     {
-        // Randomized the Index Number
-        _indexNum = Random.Range(0, arrayLength);
+        _indexNum = Random.Range(0, _arrayLength); 
         return _indexNum;
     }
-
 }
+
+
 
 
