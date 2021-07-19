@@ -12,8 +12,9 @@ public class RaceGenerator : MonoBehaviour
     [SerializeField] private int _indexNum;
 
 
-    public string GenerateRace(string _race)
+    public string GenerateRace(Character _char)
     {
+        string _race = "Any race";
         int _randInt = Randomize(_readJson.newChar.charRaces.Length);
         for (int i = 0; i < _readJson.newChar.charRaces.Length; i++)
         {
