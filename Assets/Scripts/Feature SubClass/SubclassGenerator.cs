@@ -7,16 +7,10 @@ public class SubclassGenerator : MonoBehaviour
     private string _class = "class";
     private string _subClass = "sub-class";
 
-    private void Start()
-    {
-        
-        
-    }
-
     string GenSubClass(string _class)
     {
         string _subclass = "subClass";
 
-        return _subClass;
+        return _subclass;
     }
 }

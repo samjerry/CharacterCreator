@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ReadJson : MonoBehaviour
 {
+    [SerializeField] private TextAsset _subclassFile; // this file contains all the subclass names possible sorted by Class.
     [SerializeField] private TextAsset _charNameFile; // this file contains all the character names possible sorted by Race.
     [SerializeField] private TextAsset _charDetailsFile; // this file contains all the detail names possible sorted by Type (Race, Class, Stats).
 
