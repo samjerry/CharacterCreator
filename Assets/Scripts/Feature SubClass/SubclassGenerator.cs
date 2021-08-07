@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 public class SubclassGenerator : MonoBehaviour
 {
-    void Start()
+    [SerializeField]private ReadJson _char;
+    private string _class = "class";
+    private string _subClass = "sub-class";
+
+    private void Start()
     {
+        
         
     }
 
-    void Update()
+    string GenSubClass(string _class)
     {
-        
+        string _subclass = "subClass";
+
+        return _subClass;
     }
 }
