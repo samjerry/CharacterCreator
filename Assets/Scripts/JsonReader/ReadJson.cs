@@ -12,11 +12,13 @@ public class ReadJson : MonoBehaviour
     // These Text fields represent the content from the Character.cs Arrays.
     [SerializeField] private Text _raceText;
     [SerializeField] private Text _classText;
+    [SerializeField] private Text _subclassText;
     [SerializeField] private Text _statText;
     [SerializeField] private Text _nameText;
     [SerializeField] private Text _storyText;
 
-    public string charRace; //this string is used by GetRaceNames() if you change this string to a race you got from the race generator you will get the corresponding character names if you call GetRaceNames().
+    public string charRace; //this string is used by GetRaceNames() if you change this string to the race you got from the race generator you will get the corresponding character names if you call GetRaceNames().
+    public string charClass; //this string is used by GetSubclasses() if you change this string to the class you got from the class generator you will get the corresponding Subclasses if you call GetSubclasses().
 
     public Character newChar; // this will be used as our current instance of Character.cs.
 
@@ -24,17 +26,19 @@ public class ReadJson : MonoBehaviour
     {
         newChar = new Character(); // actually creates the new instance of Character.cs
         newChar = JsonUtility.FromJson<Character>(_charDetailsFile.text); // this reads the _charDetailsFile containing (Race, Class, Stats) the Array names in the json must be the EXACT SAME as the var names in Character.cs
-        newChar.charNames = JsonUtility.FromJson<Names>(_charNameFile.text);// this reads the _charNameFile containing (names for all races) the Array names in the json must be the EXACT SAME as the var names in Character.cs
+        newChar.charNames = JsonUtility.FromJson<Names>(_charNameFile.text); // this reads the _charNameFile containing (names for all races) the Array names in the json must be the EXACT SAME as the var names in Character.cs
+        newChar.charSubclasses = JsonUtility.FromJson<Subclasses>(_subclassFile.text); // this reads the _subclassFile containing (names for all subclasses) the Array names in the json must be the EXACT SAME as the var names in Character.cs
 
         // clears the text from the text fields
         _statText.text = "";
         _classText.text = "";
+        _subclassText.text = "";
         _raceText.text = "";
         _nameText.text = "";
         _storyText.text = "";
 
         DetailsToText(); // for each array (except names) puts each index into the corresponding text fields
-        
+
         //puts all names from the Race = charRace into the _nameText field
         foreach (string _name in GetRaceNames())
         {
@@ -45,6 +49,17 @@ public class ReadJson : MonoBehaviour
             }
 
             _nameText.text += _name + "\n";
+        }
+
+        foreach (string _subclasses in GetSubclasses(charClass))
+        {
+            if (_subclasses == "ERROR: INVALID RACE")
+            {
+                _nameText.text = _subclasses;
+                break;
+            }
+
+            _nameText.text += _subclasses + "\n";
         }
     }
 
@@ -133,5 +148,31 @@ public class ReadJson : MonoBehaviour
         }
         return _names;
     }
+
+    public string[] GetSubclasses(string _class)
+    {
+        string[] _subclasses = new string[50];
+
+        switch (_class)
+        {
+            case "Artificer": _subclasses = newChar.charSubclasses.Artificer; break;
+            case "Barbarian": _subclasses = newChar.charSubclasses.Barbarian; break;
+            case "Bard": _subclasses = newChar.charSubclasses.Bard; break;
+            case "Blood_Hunter": _subclasses = newChar.charSubclasses.Blood_Hunter; break;
+            case "Cleric": _subclasses = newChar.charSubclasses.Cleric; break;
+            case "Druid": _subclasses = newChar.charSubclasses.Druid; break;
+            case "Fighter": _subclasses = newChar.charSubclasses.Fighter; break;
+            case "Monk": _subclasses = newChar.charSubclasses.Monk; break;
+            case "Paladin": _subclasses = newChar.charSubclasses.Paladin; break;
+            case "Ranger": _subclasses = newChar.charSubclasses.Ranger; break;
+            case "Rogue": _subclasses = newChar.charSubclasses.Rogue; break;
+            case "Sorcerer": _subclasses = newChar.charSubclasses.Sorcerer; break;
+            case "Warlock": _subclasses = newChar.charSubclasses.Warlock; break;
+            case "Wizard": _subclasses = newChar.charSubclasses.Wizard; break;
+            default: _subclasses[0] = "ERROR: INVALID CLASS"; break;
+        }
+
+        return _subclasses;
+    } 
 }
 

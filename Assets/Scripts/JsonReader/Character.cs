@@ -8,6 +8,10 @@ public class Character // this is a character template. you can use this in anot
     //This Array resembles the Character Name property. the GetRaceNames() function in ReadJson.cs returns the names for corresponding charRace.
     public Names charNames;
 
+    //This Array resembles the Character Sub-class property. the GetRaceNames() function in ReadJson.cs returns the names for corresponding charRace.
+    public Subclasses charSubclasses;
+
+
     //These Arrays resemble the Characters properties. the ReadJson.cs will fill these arrays with the data it retrieves from the charDetailsFile.
     public string[] charRaces; 
     public string[] charClasses; 
@@ -60,4 +64,24 @@ public class Names
     public string[] Vedalken;
     public string[] Warforged;
     public string[] Yuan_ti;
+}
+
+[System.Serializable]
+public class Subclasses
+{
+    public string[] Artificer;
+    public string[] Barbarian;
+    public string[] Bard;
+    public string[] Blood_Hunter;
+    public string[] Cleric;
+    public string[] Druid;
+    public string[] Fighter;
+    public string[] Monk;
+    public string[] Paladin;
+    public string[] Ranger;
+    public string[] Rogue;
+    public string[] Sorcerer;
+    public string[] Warlock;
+    public string[] Wizard;
+
 }
