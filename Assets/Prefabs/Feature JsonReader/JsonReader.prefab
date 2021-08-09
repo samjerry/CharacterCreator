@@ -49,6 +49,7 @@ MonoBehaviour:
   _classText: {fileID: 0}
   _statText: {fileID: 0}
   _nameText: {fileID: 0}
+  _storyText: {fileID: 0}
   charRace: yes
   newChar:
     charNames:
@@ -94,3 +95,6 @@ MonoBehaviour:
     charRaces: []
     charClasses: []
     charStats: []
+    storyAdjective: []
+    storyLocation: []
+    storyDetails: []
