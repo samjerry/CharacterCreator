@@ -13,6 +13,7 @@ public class ReadJson : MonoBehaviour
     [SerializeField] private Text _classText;
     [SerializeField] private Text _statText;
     [SerializeField] private Text _nameText;
+    [SerializeField] private Text _storyText;
 
     public string charRace; //this string is used by GetRaceNames() if you change this string to a race you got from the race generator you will get the corresponding character names if you call GetRaceNames().
 
@@ -29,6 +30,7 @@ public class ReadJson : MonoBehaviour
         _classText.text = "";
         _raceText.text = "";
         _nameText.text = "";
+        _storyText.text = "";
 
         DetailsToText(); // for each array (except names) puts each index into the corresponding text fields
         
@@ -76,6 +78,9 @@ public class ReadJson : MonoBehaviour
             }
             _statText.text += newChar.charStats[i] + "\n";
         }
+
+        _storyText.text = GameObject.Find("BackstoryGenerator").GetComponent<BackstoryGenerator>().GenerateBackstory(newChar); // randomize the character backstory
+        _raceText.text = GameObject.Find("RaceGen").GetComponent<RaceGenerator>().GenerateRace(newChar); // randomize the character race
     }
 
     public string[] GetRaceNames()
