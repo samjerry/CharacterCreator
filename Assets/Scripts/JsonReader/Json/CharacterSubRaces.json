@@ -62,5 +62,34 @@
     "Mark of detection",
     "Mark of storm",
     "Wood"
+  ],
+
+  "Half-Orc": [
+    "Base",
+    "Mark of finding"
+  ],
+
+  "Halfling": [
+    "Ghostwise",
+    "Lightfoot",
+    "Lotusden",
+    "Mark of healing",
+    "Mark of hospitality",
+    "Stout"
+  ],
+
+  "Human": [
+    "Mark of finding",
+    "Mark of handling",
+    "Mark of making",
+    "Mark of passage",
+    "Mark of sentinel",
+    "Variant"
+  ],
+
+  "Lineages": [
+    "Dhampir",
+    "Hexblood",
+    "Reborn"
   ]
 }
