@@ -168,6 +168,7 @@ public class ReadJson : MonoBehaviour
             case "Rogue": _subclasses = newChar.charSubclasses.Rogue; break;
             case "Sorcerer": _subclasses = newChar.charSubclasses.Sorcerer; break;
             case "Warlock": _subclasses = newChar.charSubclasses.Warlock; break;
+            case "WarlockPatron": _subclasses = newChar.charSubclasses.WarlockPatron; break;
             case "Wizard": _subclasses = newChar.charSubclasses.Wizard; break;
             default: _subclasses[0] = "ERROR: INVALID CLASS"; break;
         }

@@ -28,6 +28,15 @@ public class SubclassGenerator : MonoBehaviour
         {
             int _randInt = Random.Range(0, _subclasses.Length);
             _subclassText.text = _subclasses[_randInt];
+
+            if (_class == "Warlock")
+            {
+                _subclasses = _char.GetSubclasses("WarlockPatron");
+                
+                _randInt = Random.Range(0, _subclasses.Length);
+                _subclassText.text = _subclasses[_randInt] + ", " + _subclassText.text;
+            }
+
         } else {
             _subclassText.text = "INVALID CLASS";
         }

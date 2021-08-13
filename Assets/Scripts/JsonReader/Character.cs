@@ -82,6 +82,7 @@ public class Subclasses
     public string[] Rogue;
     public string[] Sorcerer;
     public string[] Warlock;
+    public string[] WarlockPatron;
     public string[] Wizard;
 
 }
