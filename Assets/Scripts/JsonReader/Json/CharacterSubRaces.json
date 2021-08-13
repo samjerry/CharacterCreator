@@ -33,5 +33,34 @@
     "Valenar high",
     "Valenar wood",
     "Wood"
+  ],
+
+  "Genasi": [
+    "Air",
+    "Earth",
+    "Fire",
+    "Water"
+  ],
+
+  "Gith": [
+    "Githyanki",
+    "Githzerai"
+  ],
+
+  "Gnome": [
+    "Deep",
+    "Forest",
+    "Mark of scribing",
+    "Rock"
+  ],
+
+  "Half-Elf": [
+    "Aquatic",
+    "Drow",
+    "Base",
+    "High",
+    "Mark of detection",
+    "Mark of storm",
+    "Wood",
   ]
 }
