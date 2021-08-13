@@ -1,0 +1,37 @@
+{
+  "Aasimar": [
+    "Fallen",
+    "Protector",
+    "Scourge",
+    "Variant"
+  ],
+
+  "Dragonborn": [
+    "Dragonblood",
+    "Base",
+    "Ravenite"
+  ],
+
+  "Dwarf": [
+    "Gray",
+    "Hill",
+    "Mark of warding",
+    "Mountain"
+  ],
+
+  "Elf": [
+    "Aereni high",
+    "Aereni wood",
+    "Dark",
+    "Eladrin",
+    "Eladrin (variant)",
+    "High",
+    "Mark of shadow",
+    "Pallid",
+    "Sea",
+    "Shadar-kai",
+    "Valenar high",
+    "Valenar wood",
+    "Wood"
+  ]
+}
