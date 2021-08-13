@@ -91,5 +91,27 @@
     "Dhampir",
     "Hexblood",
     "Reborn"
+  ],
+
+  "Shifter": [
+    "Beasthide",
+    "Longtooth",
+    "Swiftstride",
+    "Wildhunt"
+  ],
+
+  "Tiefling": [
+    "Baalzebul",
+    "Dispater",
+    "Feral",
+    "Fierna",
+    "Glasya",
+    "Levistus",
+    "Mammon",
+    "Mephistophelles",
+    "Base",
+    "Feral (Variant)",
+    "Variant",
+    "Zariel"
   ]
 }
