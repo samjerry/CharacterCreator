@@ -1,0 +1,181 @@
+{
+  "Artificer": [
+    "Alchemist",
+    "Armorer",
+    "Artillerist",
+    "Battle Smith"
+  ],
+
+  "Barbarian": [
+    "Path of Wild Magic",
+    "Path of the Ancestral Guardian",
+    "Path of the Battlerager",
+    "Path of the Beast",
+    "Path of the Berserker",
+    "Path of the Storm Herald",
+    "Path of the Token Warrion",
+    "Path of the Zaelot"
+  ],
+
+  "Bard": [
+    "College of Creation",
+    "College of Glamour",
+    "College of Lore",
+    "College of Spirits",
+    "College of Swords",
+    "College of Valor",
+    "College of Whispers",
+    "College of Eloquence"
+  ],
+
+  "Blood_Hunter": [
+    "Order of the Ghostslayer",
+    "Order of the Lycan",
+    "Order of the Mutant",
+    "Order of the Profane Soul"
+  ],
+
+  "Cleric": [
+    "Arcana Domain",
+    "Death Domain",
+    "Forge Domain",
+    "Order Domain",
+    "Grave Domain",
+    "Knowledge Domain",
+    "Life Domain",
+    "Light Domain",
+    "Nature Domain",
+    "Peace Domain",
+    "Tempest Domain",
+    "Trickery Domain",
+    "Twilight Domain",
+    "War Domain"
+  ],
+
+  "Druid": [
+    "Circle of Dreams",
+    "Circle of Stars",
+    "Circle of Wildfire",
+    "Circle of the Land",
+    "Circle of the Land (Arctic)",
+    "Circle of the Land (Coast)",
+    "Circle of the Land (Desert)",
+    "Circle of the Land (Forest)",
+    "Circle of the Land (Grassland)",
+    "Circle of the Land (Mountain)",
+    "Circle of the Land (Swamp)",
+    "Circle of the Land (Underdark)",
+    "Circle of the Moon",
+    "Circle of the Shepperd",
+    "Circle of Spores"
+  ],
+
+  "Fighter": [
+    "Arcane Archer",
+    "Battle Master",
+    "Gunslinger",
+    "Cavalier",
+    "Champion",
+    "Echo Knight",
+    "Eldritch Knight",
+    "Psi Warrior",
+    "Purple Dragon Knight",
+    "Rune Knight",
+    "Samurai"
+  ],
+
+  "Monk": [
+    "Way of the Cobalt Soul",
+    "Way of the Ascendant Dragon",
+    "Way of Mercy",
+    "Way of Shadow",
+    "Way of the Astral Self",
+    "Way of the Drunken Master",
+    "Way of the Four Elements",
+    "Way of the Kensei",
+    "Way of the Long Death",
+    "Way of the Open Hand",
+    "Way of the Sun Soul"
+  ],
+
+  "Paladin": [
+    "Oath of the Open Sea",
+    "Oath of Glory",
+    "Oath of Conquest",
+    "Oath of Devotion",
+    "Oath of Redemption",
+    "Oath of Vengeance",
+    "Oath of the Ancients",
+    "Oath of the Crown",
+    "Oath of the Watchers",
+    "Oathbreaker"
+  ],
+
+  "Ranger": [
+    "Beast Master",
+    "Fey Wanderer",
+    "Gloom Stalker",
+    "Horizon Walker",
+    "Hunter",
+    "Monster Slayer",
+    "Swarmkeeper",
+    "Drakewarden"
+  ],
+  
+  "Rogue": [
+    "Arcane Trickster",
+    "Assassin",
+    "Inquisitive",
+    "Mastermind",
+    "Phantom",
+    "Scout",
+    "Soulknife",
+    "Swashbuckler",
+    "Thief"
+  ],
+
+  "Sorcerer": [
+    "Aberrant Mind",
+    "Clockwork Soul",
+    "Divine Soul",
+    "Draconic Bloodline",
+    "Shadow Magic",
+    "Storm Sorcery",
+    "Wild Magic"
+  ],
+
+  "WarlockPatron": [
+    "The Archfey",
+    "The Celestial",
+    "The Fathomless",
+    "The Fiend",
+    "The Genie",
+    "The Great Old One",
+    "The Hexblade",
+    "The Undead",
+    "The Undying"
+  ],
+
+  "Warlock": [
+    "Pact of the Blade",
+    "Pact of the Chain",
+    "Pact of the Talisman",
+    "Pact of the Tome"
+  ],
+
+  "Wizard": [
+    "Bladesinging",
+    "Chronurgy Magic",
+    "Graviturgy Magic",
+    "Order of Scribes",
+    "School of Abjuration",
+    "School of Conjuration",
+    "School of Divination",
+    "School of Enchantment",
+    "School of Evocation",
+    "School of Illusion",
+    "School of Necromancy",
+    "School of Transmutation",
+    "War Magic"
+  ]
+}
